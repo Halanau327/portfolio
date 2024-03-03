@@ -6,7 +6,7 @@ import photo from "../../assets/images/ava.png"
 import {Billboard} from "../../components/billboard/Billboard";
 
 
-const items = ["Skills", "Projects", "Contacts",]
+const items = ["Skills", "Projects", "Testimony", "Contacts"]
 export const Header = () => {
     return (
         <WrapperHeader>

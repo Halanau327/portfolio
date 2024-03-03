@@ -8,4 +8,5 @@ export const SectionTitle = styled.h2`
     line-height: 150.02%;
     letter-spacing: -4%;
     text-transform: uppercase;
+    color: #2D2C2C;
 `

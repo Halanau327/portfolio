@@ -9,7 +9,7 @@ export const Slider = () => {
         <StyledSlider>
             <FlexWrapper>
                 <Slide>
-                    <FlexWrapper justify="space-around">
+                    <FlexWrapper justify="space-around" align="center">
                         <Icon iconId={"leftArr"} width={"27px"} height={"127px"}/>
                         <Text>“Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis
                             nec
@@ -29,7 +29,7 @@ export const Slider = () => {
 
 const StyledSlider = styled.div`
     text-align: center;
-    border: 1px solid red;
+    
 `
 const Slide = styled.div`
 
@@ -48,8 +48,10 @@ const Image = styled.img`
 `
 const Name = styled.p`
     text-transform: capitalize;
+
 `
 const Job = styled.p`
     text-transform: uppercase;
+ 
 `
 

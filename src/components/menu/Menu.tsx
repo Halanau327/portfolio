@@ -21,6 +21,17 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 32px;
         justify-content: center;
+        list-style-type: none;
+        font-family: Epilogue, sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 126.02%;
+        letter-spacing: 24%; 
+    }
+    a {
+        text-decoration: none;
+        
     }
 `
 

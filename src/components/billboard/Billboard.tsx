@@ -5,7 +5,7 @@ import {FlexWrapper} from "../FlexWrapper";
 export const Billboard = () => {
     return (
         <div>
-            <FlexWrapper direction="column">
+            <FlexWrapper direction="column" >
                 <HiBillboard>Hi! Everyone</HiBillboard>
                 <SubTitleBillboard>Alex Halanau</SubTitleBillboard>
                 <TitleBillboard>Frontend Dev</TitleBillboard>
@@ -22,8 +22,12 @@ const HiBillboard = styled.span`
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #2D2C2C;
+    color: white;
+    background-color: #2D2C2C;
+    max-width: 121px;
+    padding: 4px;
 `
+
 
 const SubTitleBillboard = styled.h2`
     font-family: "Epilogue", sans-serif;
