@@ -1,77 +1,83 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
+import {Container} from "../Container";
 
 export const Billboard = () => {
     return (
         <div>
-            <FlexWrapper direction="column" >
-                <HiBillboard>Hi! Everyone</HiBillboard>
-                <SubTitleBillboard>Alex Halanau</SubTitleBillboard>
-                <TitleBillboard>Frontend Dev</TitleBillboard>
-                <SpanBillboard>Collaborating with designers and backend developers for exceptional digital
-                    solutions.</SpanBillboard>
-                <ButtonBillboard>get in touch</ButtonBillboard>
-            </FlexWrapper>
+            <BillboardContainer>
+                <FlexWrapper direction="column">
+                    <HiBillboard>Hi! Everyone</HiBillboard>
+                    <SubTitleBillboard>Halanau Alex</SubTitleBillboard>
+                    <TitleBillboard>Frontend Dev</TitleBillboard>
+                    <SpanBillboard>Collaborating with designers and backend developers for exceptional digital
+                        solutions.</SpanBillboard>
+                    <ButtonBillboard>get in touch</ButtonBillboard>
+                </FlexWrapper>
+            </BillboardContainer>
         </div>
     );
 };
 
+const BillboardContainer = styled.div`
+    max-width: 1400px;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    border: 1px solid red;
+`
+
 const HiBillboard = styled.span`
-    font-family: "Epilogue", sans-serif;
+    max-width: 121px;
+    width: 100%;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
     color: white;
     background-color: #2D2C2C;
-    max-width: 121px;
     padding: 4px;
+    margin-bottom: 45px;
 `
 
-
 const SubTitleBillboard = styled.h2`
-    font-family: "Epilogue", sans-serif;
     font-size: 108px;
     font-weight: 800;
     line-height: 111.02%;
-    letter-spacing: -4%;
     text-transform: capitalize;
-    color: #2D2C2C;
+    
 `
 
 const TitleBillboard = styled.h1`
-    font-family: "Epilogue", sans-serif;
     font-size: 108px;
     font-weight: 800;
     line-height: 111.02%;
-    letter-spacing: -4%;
     text-transform: capitalize;
     color: white;
+    margin-bottom: 35px;
 `
 
 const SpanBillboard = styled.span`
-    font-family: "Epilogue", sans-serif;
+    max-width: 720px;
+    width: 100%;
     font-size: 24px;
     font-weight: 400;
     line-height: 198.02%;
-    letter-spacing: 2%;
-    text-align: left;
     color: white;
+    margin-bottom: 70px;
 `
 
 const ButtonBillboard = styled.button`
-    background-color: transparent;
-    box-sizing: border-box;
-    border: 1px solid;
-    width: 254px;
+    max-width: 254px;
+    width: 100%;
     height: 81px;
-    color: rgb(255, 255, 255);
-    font-family: "Epilogue", sans-serif;
+    border: 1px solid;
+    background-color: transparent;
     font-size: 19px;
     font-weight: 600;
-    line-height: 234.52%;
-    letter-spacing: 10%;
-    text-align: center;
     text-transform: uppercase;
     color: white;
+    
 `
+

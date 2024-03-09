@@ -13,7 +13,6 @@ export const Footer = () => {
                 <Icon iconId="instagram" height="20px" width="50px"></Icon>
             </FlexWrapper>
                 <TextFooter>2024 Relume. All right reserved.</TextFooter>
-
         </StyledFooter>
     );
 };
@@ -27,7 +26,6 @@ const StyledFooter = styled.div`
     margin: 0 auto;
 `
 const TextFooter = styled.footer`
-    font-family: "Epilogue", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;

@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
 import photo from "../../assets/images/ava.png"
 import {Billboard} from "../../components/billboard/Billboard";
+import Image from "./../../assets/images/icon.png"
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
+
 
 
 const items = ["Skills", "Projects", "Testimony", "Contacts"]
@@ -11,17 +13,23 @@ export const Header = () => {
     return (
         <WrapperHeader>
             <StyledHeader>
-                <Logo/>
-                <Menu menuItems={items}/>
+                <HeaderContainer>
+                    <HeaderImage src={Image}/>
+                    <HeaderMenu menuItems={items}/>
+                    <SpanContainer>
+                        <BurgerSpan/>
+                        <BurgerSpan/>
+                        <BurgerSpan/>
+                    </SpanContainer>
+                </HeaderContainer>
+                <Billboard/>
             </StyledHeader>
-            <Billboard/>
         </WrapperHeader>
     );
 };
 
 const StyledHeader = styled.header`
-    display: flex;
-    justify-content: space-between;
+
 `
 
 const WrapperHeader = styled.div`
@@ -33,3 +41,30 @@ const WrapperHeader = styled.div`
     height: 100vh;
 `
 
+const HeaderImage = styled.img`
+    width: 100px;
+    height: 70px;
+`
+
+const BurgerSpan = styled.span`
+    display: inline-block;
+    background-color: black;
+    width: 27px;
+    height: 3px;
+`
+const HeaderContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    max-width: 1762px;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 15px;
+    margin: 0 auto 110px auto;
+    border: 1px solid red;
+`
+
+const SpanContainer = styled.div`
+    width: 32px;
+    height: 21px;
+
+`

@@ -5,6 +5,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import testimonyBackground from './../../../assets/images/background.jpg'
+import {Container} from "../../../components/Container";
 
 export const Testimony = () => {
     return (
