@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 import {Container} from "../Container";
+import {theme} from "../../styles/Theme";
 
 export const Billboard = () => {
     return (
@@ -36,7 +37,7 @@ const HiBillboard = styled.span`
     font-weight: 400;
     text-transform: uppercase;
     color: white;
-    background-color: #2D2C2C;
+    background-color: ${theme.colors.accent};
     padding: 4px;
     margin-bottom: 45px;
 `

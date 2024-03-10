@@ -11,6 +11,8 @@ import fourthProjectImg from './../../../assets/images/project4.png'
 import fifthProjectImg from './../../../assets/images/project5.png'
 import sixthProjectImg from './../../../assets/images/project6.png'
 import {Container} from "../../../components/Container";
+import {ProjectsMenu} from "./projectsMenu/ProjectsMenu";
+
 
 
 const projectMenuItems = ["All", "Landing page", "React", "Spa"]
@@ -21,32 +23,26 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <Menu menuItems={projectMenuItems}/>
-                <FlexWrapper wrap="wrap">
+                <ProjectsMenu menuItems={projectMenuItems}/>
+                <FlexWrapper wrap="wrap" justify="center">
                     <Project src={firstProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                     <Project src={secondProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                     <Project src={thirdProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                     <Project src={fourthProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                     <Project src={fifthProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                     <Project src={sixthProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-                             techStack="Tech stack : HTML , JavaScript, SASS, React" livePreview="Live Preview"
-                             viewCode="View Code"/>
+                             techStack="Tech stack : HTML , JavaScript, SASS, React"/>
                 </FlexWrapper>
             </Container>
         </StyledProjects>

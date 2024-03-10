@@ -8,50 +8,55 @@ export const Slider = () => {
     return (
         <StyledSlider>
             <FlexWrapper>
-                <Slide>
-                    <FlexWrapper justify="space-around" align="center">
-                        <Icon iconId={"leftArr"} width={"27px"} height={"127px"}/>
-                        <Text>“Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis
-                            nec
-                            dolor posuere tempus. Nulla congue et dolor sit amet, elit consectetur adipiscing.”</Text>
-                        <Icon iconId={"rightArr"} width={"27px"} height={"127px"}/>
-                    </FlexWrapper>
-                    <Image src={SliderImg}></Image>
-                    <Name>Lukas Wolfer</Name>
-                    <Job>ceo - raisins</Job>
-                </Slide>
-
+                <IconWrapper>
+                    <Icon iconId="leftArr"/>
+                </IconWrapper>
+                <Text>“Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis
+                    nec
+                    dolor posuere tempus. Nulla congue et dolor sit amet, elit consectetur adipiscing.”</Text>
+                <IconWrapper>
+                    <Icon iconId="rightArr"/>
+                </IconWrapper>
             </FlexWrapper>
-
+            <FlexWrapper direction="column" align="center" margin="40px 0 0 0">
+                <Image src={SliderImg}></Image>
+                <Name>Lukas Wolfer</Name>
+                <Job>ceo - raisins</Job>
+            </FlexWrapper>
         </StyledSlider>
     );
 };
 
 const StyledSlider = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     text-align: center;
-    
-`
-const Slide = styled.div`
-
 `
 
 const Text = styled.p`
-    font-family: Epilogue;
     font-size: 29px;
     font-weight: 400;
     line-height: 150%;
-    max-width: 916px;
+    color: black;
 `
 const Image = styled.img`
     width: 66px;
     height: 66px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 `
-const Name = styled.p`
+const Name = styled.span`
     text-transform: capitalize;
-
+    color: black;
+    margin-bottom: 5px;
 `
-const Job = styled.p`
-    text-transform: uppercase;
- 
+const Job = styled.span`
+    color: black;
+`
+
+const IconWrapper = styled.div`
+    width: 100px;
+    height: 100px;
 `
 

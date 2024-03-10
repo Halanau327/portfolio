@@ -6,8 +6,8 @@ type IconPropsType = {
     width?: string
     height?: string
     viewBox?: string
-    color?: string
 }
+
 export const Icon = (props: IconPropsType) => {
     return (
         <svg width={props.width} height={props.height} viewBox={props.viewBox}

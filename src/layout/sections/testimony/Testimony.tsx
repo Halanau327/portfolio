@@ -1,38 +1,39 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import testimonyBackground from './../../../assets/images/background.jpg'
+import testimonyBackground from './../../../assets/images/background4.jpg'
+import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
-            <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper align="center" direction="column">
-                <Text>what clients says</Text>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
+                <FlexWrapper justify="center">
+                    <Text>what clients say</Text>
+                </FlexWrapper>
                 <Slider/>
-            </FlexWrapper>
+            </Container>
         </StyledTestimony>
     );
 };
 
 const StyledTestimony = styled.section`
-    min-height: 838px;
     background-image: url(${testimonyBackground});
     background-size: cover;
     background-position: top;
     width: 100%;
-    height: 100vh;
 `
-const Text = styled.p`
+const Text = styled.span`
     text-transform: uppercase;
     text-align: center;
-    font-family: Epilogue;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
-    color: #2D2C2C;
+    color: ${theme.colors.primaryBg};
+    margin: 40px 0;
+    background-color: ${theme.colors.accent};
 `

@@ -1,49 +1,90 @@
 import React from 'react';
 import styled from "styled-components";
-
+import {Container} from "../../../../components/Container";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {Icon} from "../../../../components/icon/Icon";
 
 type ProjectPropsType = {
     title?: string
     text?: string
     src?: string
     techStack?: string
-    livePreview?: string
-    viewCode?: string
 }
+
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <Image src={props.src} alt=""/>
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
-            <TechStack>{props.techStack}</TechStack>
-            <LivePreview>{props.livePreview}</LivePreview>
-            <ViewCode>{props.viewCode}</ViewCode>
+            <FlexWrapper>
+                <Image src={props.src} alt="projectImage"/>
+            </FlexWrapper>
+            <FlexWrapper wrap="wrap">
+                <Title>{props.title}</Title>
+                <Text>{props.text}</Text>
+                <TechStack>{props.techStack}</TechStack>
+                <FlexWrapper width="100%" justify="space-around" >
+                    <FlexWrapper >
+                        <Icon iconId="live-preview" width="20px" height="20px"/>
+                        <LivePreview>live Preview</LivePreview>
+                    </FlexWrapper>
+                    <FlexWrapper>
+                        <Icon iconId="view-code" width="20px" height="20px"/>
+                        <ViewCode>view code</ViewCode>
+                    </FlexWrapper>
+                </FlexWrapper>
+            </FlexWrapper>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
-    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 330px;
+    width: 100%;
+    margin: 20px 20px;
 `
 
 const Image = styled.img`
-    text-align: center;
+    width: 330px;
 `
+
 const Title = styled.h3`
-    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 126.02%;
 `
 
 const Text = styled.p`
-    text-align: center;
-`
-const TechStack = styled.p`
-    text-align: center;
+    max-width: 314px;
+    width: 100%;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 126.02%;
 `
 
-const LivePreview = styled.p`
-    text-align: center;
+const TechStack = styled.p`
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 126.02%;
 `
-const ViewCode = styled.p`
-    text-align: center;
+
+const LivePreview = styled.span`
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 126.02%;
+    text-transform: capitalize;
+    margin-left: 10px;
+    text-decoration: underline;
+`
+
+const ViewCode = styled.span`
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 126.02%;
+    text-transform: capitalize;
+    margin-left: 10px;
+    text-decoration: underline;
 `

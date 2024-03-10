@@ -25,7 +25,6 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
     width: 380px;
     padding: 10px 20px 50px;
-    
 `
 
 const SkillTitle= styled.h3`
@@ -38,6 +37,5 @@ const SkillText= styled.p`
     text-align: center;
     font-size: 19px;
     font-weight: 300;
-    line-height: 188.02%;
-
+    line-height: 126.02%;
 `
