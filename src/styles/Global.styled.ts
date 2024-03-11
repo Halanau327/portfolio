@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     section {
-        padding: 10px 0;
+        padding: 30px 0;
     }
 
     // section:nth-of-type(even) {

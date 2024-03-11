@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import testimonyBackground from './../../../assets/images/background4.jpg'
+import testimonyBackground from './../../../assets/images/back1.jpg'
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
 
@@ -28,12 +28,13 @@ const StyledTestimony = styled.section`
     width: 100%;
 `
 const Text = styled.span`
-    text-transform: uppercase;
-    text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
-    color: ${theme.colors.primaryBg};
+    text-transform: uppercase;
+    text-align: center;
     margin: 40px 0;
-    background-color: ${theme.colors.accent};
+    padding: 5px;
+    color: ${theme.colors.primaryBg};
+    background-color:black;
 `

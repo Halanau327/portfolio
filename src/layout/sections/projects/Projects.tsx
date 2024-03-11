@@ -15,6 +15,7 @@ import {ProjectsMenu} from "./projectsMenu/ProjectsMenu";
 
 
 
+
 const projectMenuItems = ["All", "Landing page", "React", "Spa"]
 
 
@@ -50,8 +51,7 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
-
-    //background-color: #C5C5C5; 
+    background-size: cover;
 `
 
 // const images = [firstProjectImg, secondProjectImg, thirdProjectImg, fourthProjectImg, fifthProjectImg, sixthProjectImg]

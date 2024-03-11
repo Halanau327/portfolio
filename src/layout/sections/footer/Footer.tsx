@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Icon} from "../../../components/icon/Icon";
+import {theme} from "../../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -21,7 +22,7 @@ const StyledFooter = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #131212;
+    background-color: ${theme.colors.secondaryBg};
     height: 150px;
     margin: 0 auto;
 `
@@ -29,6 +30,5 @@ const TextFooter = styled.footer`
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0%;
-    color: #8C8C8C
+    color: ${theme.colors.primaryBg};
 `

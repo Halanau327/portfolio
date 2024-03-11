@@ -1,36 +1,34 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
-import {Container} from "../Container";
 import {theme} from "../../styles/Theme";
 
 export const Billboard = () => {
     return (
         <div>
-            <BillboardContainer>
+            <ContainerOfBillboard>
                 <FlexWrapper direction="column">
-                    <HiBillboard>Hi! Everyone</HiBillboard>
-                    <SubTitleBillboard>Halanau Alex</SubTitleBillboard>
-                    <TitleBillboard>Frontend Dev</TitleBillboard>
-                    <SpanBillboard>Collaborating with designers and backend developers for exceptional digital
-                        solutions.</SpanBillboard>
+                    <GreedingsOfBillboard>Hi! Everyone</GreedingsOfBillboard>
+                    <SubtitleOfBillboard>Halanau Alex</SubtitleOfBillboard>
+                    <TitleOfBillboard>Frontend Dev</TitleOfBillboard>
+                    <SpanOfBillboard>Collaborating with designers and backend developers for exceptional digital
+                        solutions.</SpanOfBillboard>
                     <ButtonBillboard>get in touch</ButtonBillboard>
                 </FlexWrapper>
-            </BillboardContainer>
+            </ContainerOfBillboard>
         </div>
     );
 };
 
-const BillboardContainer = styled.div`
+const ContainerOfBillboard = styled.div`
     max-width: 1400px;
     width: 100%;
     min-height: 100%;
     padding: 0 15px;
     margin: 0 auto;
-    border: 1px solid red;
 `
 
-const HiBillboard = styled.span`
+const GreedingsOfBillboard = styled.p`
     max-width: 121px;
     width: 100%;
     font-size: 18px;
@@ -38,19 +36,18 @@ const HiBillboard = styled.span`
     text-transform: uppercase;
     color: white;
     background-color: ${theme.colors.accent};
-    padding: 4px;
+    padding: 5px;
     margin-bottom: 45px;
 `
 
-const SubTitleBillboard = styled.h2`
+const SubtitleOfBillboard = styled.h2`
     font-size: 108px;
     font-weight: 800;
     line-height: 111.02%;
     text-transform: capitalize;
-    
 `
 
-const TitleBillboard = styled.h1`
+const TitleOfBillboard = styled.h1`
     font-size: 108px;
     font-weight: 800;
     line-height: 111.02%;
@@ -59,7 +56,7 @@ const TitleBillboard = styled.h1`
     margin-bottom: 35px;
 `
 
-const SpanBillboard = styled.span`
+const SpanOfBillboard = styled.span`
     max-width: 720px;
     width: 100%;
     font-size: 24px;
@@ -79,6 +76,6 @@ const ButtonBillboard = styled.button`
     font-weight: 600;
     text-transform: uppercase;
     color: white;
-    
+
 `
 

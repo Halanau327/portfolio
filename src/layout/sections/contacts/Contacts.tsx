@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Icon} from "../../../components/icon/Icon";
 import {Menu} from "../../../components/menu/Menu";
 import {Container} from "../../../components/Container";
 import contactsIcon from "./../../../assets/images/icon.png"
+import {theme} from "../../../styles/Theme";
 
 const itemsContacts = ["Skills", "Projects", "Testimony", "Contacts"]
 
@@ -13,7 +13,7 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper wrap="wrap">
+                <FlexWrapper wrap="wrap" justify="space-around">
                     <FlexWrapper direction="column">
                         <Logo src={contactsIcon}/>
                         <TextContactsLeft>Subscribe to newsletter to get some updates related with branding, designs and
@@ -21,10 +21,10 @@ export const Contacts = () => {
                         <InputContacts placeholder="write your email address"/>
                         <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
                     </FlexWrapper>
-
-                    <Menu menuItems={itemsContacts}/>
-
-                    <FlexWrapper direction="column">
+                    <FlexWrapper align="center">
+                        <Menu menuItems={itemsContacts}/>
+                    </FlexWrapper>
+                    <FlexWrapper direction="column" justify="center">
                         <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply have a
                             conversation.</TextContactsRight>
                         <Email>a.halanau@gmail.com</Email>
@@ -36,7 +36,6 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-    min-height: 500px;
     nav {
         ul {
             flex-direction: column;
@@ -48,39 +47,44 @@ const TextContactsLeft = styled.p`
     font-size: 18px;
     font-weight: 400;
     line-height: 225.02%;
-    letter-spacing: 2%;
-    max-width: 304px;
+    max-width: 300px;
 `
 
 const TextContactsRight = styled.p`
     font-size: 18px;
     font-weight: 400;
     line-height: 225.02%;
-    letter-spacing: 2%;
-    max-width: 442px;
+    max-width: 340px;
 `
 
 const InputContacts = styled.input`
     font-size: 17px;
     font-weight: 400;
     line-height: 23px;
-    letter-spacing: 2%;
     text-transform: capitalize;
     height: 50px;
-    width: 304px;
+    width: 300px;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: ${theme.colors.secondaryBg};
+    background-color: ${theme.colors.font};
+    border: none;
+ 
+    &::placeholder {
+        color: ${theme.colors.secondaryBg};
+    }
 `
 
 const SubscribeButton = styled.button`
     font-size: 17px;
     font-weight: 600;
     line-height: 23px;
-    letter-spacing: 10%;
     text-align: center;
     text-transform: uppercase;
     height: 50px;
-    width: 304px;
-    background-color: #131212;
-    color: white;
+    width: 300px;
+    background-color: ${theme.colors.secondaryBg};
+    color: ${theme.colors.primaryBg};
     border: none;
 `
 
@@ -88,12 +92,9 @@ const Email = styled.a`
     font-size: 30px;
     font-weight: 300;
     line-height: 183.02%;
-    letter-spacing: 1%;
-`
-
-const ContactsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    text-decoration: underline;
+    text-decoration-color: ${theme.colors.secondaryBg};
+ 
 `
 
 const Logo = styled.img`
