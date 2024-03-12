@@ -86,6 +86,7 @@ const SubscribeButton = styled.button`
     background-color: ${theme.colors.secondaryBg};
     color: ${theme.colors.primaryBg};
     border: none;
+    cursor: pointer;
 `
 
 const Email = styled.a`
@@ -94,7 +95,7 @@ const Email = styled.a`
     line-height: 183.02%;
     text-decoration: underline;
     text-decoration-color: ${theme.colors.secondaryBg};
- 
+    cursor: pointer;
 `
 
 const Logo = styled.img`

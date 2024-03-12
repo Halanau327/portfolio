@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 type BurgerSpanPropsType = {
     width?: string
@@ -28,7 +29,7 @@ const Span = styled.span<BurgerSpanPropsType>`
     display: block;
     width: ${props => props.width || "100%"};
     height: 3px;
-    background-color: #000;
+    background-color: ${theme.colors.secondaryBg};
     transition: background-color 0.3s ease;
 
     &:not(:last-child) {

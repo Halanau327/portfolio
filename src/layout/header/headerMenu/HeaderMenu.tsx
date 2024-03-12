@@ -25,7 +25,6 @@ const StyledHeaderMenu = styled.nav`
         font-size: 18px;
         font-weight: 400;
         line-height: 126.02%;
-        letter-spacing: 24%;
     }
 `
 const ListItem = styled.li`
