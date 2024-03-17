@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../../../components/Container";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Icon} from "../../../../components/icon/Icon";
+import {theme} from "../../../../styles/Theme";
 
 type ProjectPropsType = {
     title?: string
@@ -21,12 +22,12 @@ export const Project = (props: ProjectPropsType) => {
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
                 <TechStack>{props.techStack}</TechStack>
-                <FlexWrapper width="100%" justify="space-around" >
-                    <FlexWrapper >
+                <FlexWrapper>
+                    <FlexWrapper>
                         <Icon iconId="live-preview" width="20px" height="20px"/>
                         <LivePreview>live Preview</LivePreview>
                     </FlexWrapper>
-                    <FlexWrapper>
+                    <FlexWrapper margin="0 0 0 50px">
                         <Icon iconId="view-code" width="20px" height="20px"/>
                         <ViewCode>view code</ViewCode>
                     </FlexWrapper>
@@ -47,6 +48,7 @@ const StyledProject = styled.div`
 
 const Image = styled.img`
     width: 330px;
+    height: 260px;
 `
 
 const Title = styled.h3`
@@ -71,20 +73,33 @@ const TechStack = styled.p`
     line-height: 126.02%;
 `
 
-const LivePreview = styled.span`
+const LivePreview = styled.button`
     font-size: 14px;
     font-weight: 300;
     line-height: 126.02%;
     text-transform: capitalize;
     margin-left: 10px;
     text-decoration: underline;
+    cursor: pointer;
+    color: ${theme.colors.accent};
+
+    &:hover {
+        transform: scale(110%);
+        transition: transform 1s;
+    }
 `
 
-const ViewCode = styled.span`
+const ViewCode = styled.a`
     font-size: 14px;
     font-weight: 300;
     line-height: 126.02%;
     text-transform: capitalize;
     margin-left: 10px;
     text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(110%);
+        transition: transform 1s;
+    }
 `

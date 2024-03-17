@@ -11,7 +11,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>skills</SectionTitle>
-                <FlexWrapper wrap="wrap" justify="space-between">
+                <FlexWrapper wrap="wrap" justify="space-around">
                     <Skill iconId="html5"
                            title="HTML5"
                            description="Experienced in HTML, proficient in creating well-structured and semantic web pages. Knowledgeable in HTML5 features, including forms, multimedia, and responsive design. Strong understanding of tags, attributes, and document structure."/>
@@ -27,8 +27,8 @@ export const Skills = () => {
                     <Skill iconId="javascript"
                            title="javascript"
                            description="Proficient in JavaScript, adept at building dynamic web applications. Experienced in DOM manipulation, event handling, and utilizing popular libraries/frameworks for enhanced functionality. Strong understanding of JavaScript's core concepts"/>
-                    <Skill iconId="github"
-                           title="github"
+                    <Skill iconId="git"
+                           title="git"
                            description="Experienced in GitHub for version control and collaborative development. Proficient in managing repositories, branches, and pull requests. Skilled in leveraging GitHub's features for efficient project collaboration and seamless code management."/>
                 </FlexWrapper>
             </Container>
@@ -37,6 +37,5 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
- 
     
 `

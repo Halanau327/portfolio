@@ -10,6 +10,7 @@ type FlexWrapperPropsType = {
     margin?: string
     vertical?: string
     padding?: string
+    gap?: string
 }
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
@@ -22,4 +23,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     margin: ${props => props.margin};
     vertical-align: ${props => props.vertical};
     padding: ${props => props.padding};
+    gap: ${props => props.gap};
 `

@@ -4,20 +4,16 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Project} from "./project/Project";
-import firstProjectImg from './../../../assets/images/project1.png'
-import secondProjectImg from './../../../assets/images/project2.png'
-import thirdProjectImg from './../../../assets/images/project3.png'
-import fourthProjectImg from './../../../assets/images/project4.png'
-import fifthProjectImg from './../../../assets/images/project5.png'
-import sixthProjectImg from './../../../assets/images/project6.png'
+import firstProjectImg from './../../../assets/images/project1.jpg'
+import secondProjectImg from './../../../assets/images/project2.jpg'
+import thirdProjectImg from './../../../assets/images/project3.jpg'
+import fourthProjectImg from './../../../assets/images/project4.jpg'
+import fifthProjectImg from './../../../assets/images/project5.jpg'
+import sixthProjectImg from './../../../assets/images/project6.jpg'
 import {Container} from "../../../components/Container";
 import {ProjectsMenu} from "./projectsMenu/ProjectsMenu";
 
-
-
-
 const projectMenuItems = ["All", "Landing page", "React", "Spa"]
-
 
 export const Projects = () => {
     return (
@@ -25,7 +21,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <ProjectsMenu menuItems={projectMenuItems}/>
-                <FlexWrapper wrap="wrap" justify="center">
+                <FlexWrapper wrap="wrap" justify="space-around">
                     <Project src={firstProjectImg} title="Project Tile goes here"
                              text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
                              techStack="Tech stack : HTML , JavaScript, SASS, React"/>

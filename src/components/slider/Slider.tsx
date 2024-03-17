@@ -9,15 +9,14 @@ export const Slider = () => {
     return (
         <StyledSlider>
             <FlexWrapper>
-                <IconWrapper>
                     <Icon iconId="leftArr"/>
-                </IconWrapper>
+
                 <Text>“Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis
                     nec
                     dolor posuere tempus. Nulla congue et dolor sit amet, elit consectetur adipiscing.”</Text>
-                <IconWrapper>
+
                     <Icon iconId="rightArr"/>
-                </IconWrapper>
+
             </FlexWrapper>
             <FlexWrapper direction="column" align="center" margin="40px 0 0 0">
                 <Image src={SliderImg}></Image>
@@ -60,6 +59,9 @@ const Job = styled.span`
 `
 
 const IconWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: center;
     width: 100px;
     height: 100px;
 `

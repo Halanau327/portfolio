@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 export const Menu = (props: { menuItems: Array<string> }) => {
@@ -7,9 +8,9 @@ export const Menu = (props: { menuItems: Array<string> }) => {
         <StyledMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
-                    return <li key={index}>
-                        <a href="">{item}</a>
-                    </li>
+                    return <ListItem key={index}>
+                        <Link href={`#${item}`}>{item}</Link>
+                    </ListItem>
                 })}
             </ul>
         </StyledMenu>
@@ -25,7 +26,19 @@ const StyledMenu = styled.nav`
         font-size: 18px;
         font-weight: 400;
         line-height: 126.02%;
-        letter-spacing: 24%; 
+    }
+`
+
+const Link = styled.a`
+    &:visited {
+        color: ${theme.colors.secondaryBg};
+    }
+`
+
+const ListItem = styled.li`
+    &:hover {
+        transform: scale(120%);
+        transition: transform 1s;
     }
 `
 

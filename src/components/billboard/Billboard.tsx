@@ -18,18 +18,19 @@ export const Billboard = () => {
     );
 };
 
+
+
 const StyledBillboard = styled.div`
     max-width: 1400px;
     width: 100%;
     min-height: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
+    margin: 70px auto 0;
 `
 
 const GreedingsOfBillboard = styled.span`
-    max-width: 121px;
+    max-width: 141px;
     width: 100%;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 400;
     text-transform: uppercase;
     color: ${theme.colors.primaryBg};
@@ -39,14 +40,14 @@ const GreedingsOfBillboard = styled.span`
 `
 
 const SubtitleOfBillboard = styled.span`
-    font-size: 108px;
+    font-size: calc((100vw - 375px)/(1920 - 375) * (108 - 48) + 48px);
     font-weight: 800;
     line-height: 111.02%;
     text-transform: capitalize;
 `
 
 const TitleOfBillboard = styled.h1`
-    font-size: 108px;
+    font-size: calc((100vw - 375px)/(1920 - 375) * (108 - 48) + 48px);
     font-weight: 800;
     line-height: 111.02%;
     text-transform: capitalize;
@@ -57,7 +58,7 @@ const TitleOfBillboard = styled.h1`
 const DescriptionOfBillboard = styled.span`
     max-width: 720px;
     width: 100%;
-    font-size: 24px;
+    font-size: calc((100vw - 375px)/(1920 - 375) * (24 - 19) + 19px);
     font-weight: 400;
     line-height: 198.02%;
     color: ${theme.colors.primaryBg};
@@ -75,5 +76,14 @@ const ButtonBillboard = styled.button`
     text-transform: uppercase;
     color: ${theme.colors.primaryBg};
     cursor: pointer;
-`
 
+    &:hover {
+        color: ${theme.colors.secondaryBg};
+        background-color: ${theme.colors.primaryBg};
+        border: 2px solid ${theme.colors.secondaryBg};
+    }
+    
+    @media screen () {
+        
+    }
+`

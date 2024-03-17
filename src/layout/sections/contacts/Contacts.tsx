@@ -13,10 +13,11 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper wrap="wrap" justify="space-around">
+                <Logo src={contactsIcon}/>
+                <ContactsWrapper>
                     <FlexWrapper direction="column">
-                        <Logo src={contactsIcon}/>
-                        <TextContactsLeft>Subscribe to newsletter to get some updates related with branding, designs and
+                        <TextContactsLeft>Subscribe to newsletter to get some updates related with branding, designs
+                            and
                             more.</TextContactsLeft>
                         <InputContacts placeholder="write your email address"/>
                         <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
@@ -25,11 +26,12 @@ export const Contacts = () => {
                         <Menu menuItems={itemsContacts}/>
                     </FlexWrapper>
                     <FlexWrapper direction="column" justify="center">
-                        <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply have a
+                        <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply
+                            have a
                             conversation.</TextContactsRight>
-                        <Email>a.halanau@gmail.com</Email>
+                        <Email href="mailto:a.halanau@gmail.com">a.halanau@gmail.com</Email>
                     </FlexWrapper>
-                </FlexWrapper>
+                </ContactsWrapper>
             </Container>
         </StyledContacts>
     );
@@ -69,7 +71,7 @@ const InputContacts = styled.input`
     color: ${theme.colors.secondaryBg};
     background-color: ${theme.colors.font};
     border: none;
- 
+
     &::placeholder {
         color: ${theme.colors.secondaryBg};
     }
@@ -87,6 +89,12 @@ const SubscribeButton = styled.button`
     color: ${theme.colors.primaryBg};
     border: none;
     cursor: pointer;
+
+    &:hover {
+        color: ${theme.colors.secondaryBg};
+        background-color: ${theme.colors.primaryBg};
+        border: 2px solid ${theme.colors.secondaryBg};
+    }
 `
 
 const Email = styled.a`
@@ -94,11 +102,32 @@ const Email = styled.a`
     font-weight: 300;
     line-height: 183.02%;
     text-decoration: underline;
-    text-decoration-color: ${theme.colors.secondaryBg};
     cursor: pointer;
+    color: ${theme.colors.secondaryBg};
+    text-decoration-color: ${theme.colors.secondaryBg};
+
+    &:visited {
+        color: ${theme.colors.secondaryBg};
+    }
+
+    &:hover {
+        transform: scale(110%);
+        transition: transform 1s;
+    }
 `
 
 const Logo = styled.img`
     width: 100px;
     height: 70px;
+`
+
+const ContactsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 850px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:50px;
+    }
 `
