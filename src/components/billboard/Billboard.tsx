@@ -25,10 +25,16 @@ const StyledBillboard = styled.div`
     width: 100%;
     min-height: 100%;
     margin: 70px auto 0;
+    padding: 15px 15px;
+    
+    @media screen and (max-width: 1140px) {
+        padding-top: 50px;
+        
+    }
 `
 
 const GreedingsOfBillboard = styled.span`
-    max-width: 141px;
+    max-width: 127px;
     width: 100%;
     font-size: 19px;
     font-weight: 400;
@@ -44,6 +50,11 @@ const SubtitleOfBillboard = styled.span`
     font-weight: 800;
     line-height: 111.02%;
     text-transform: capitalize;
+
+    @media screen and (max-width: 1140px) {
+        color: ${theme.colors.primaryBg};
+
+    }
 `
 
 const TitleOfBillboard = styled.h1`
@@ -63,6 +74,10 @@ const DescriptionOfBillboard = styled.span`
     line-height: 198.02%;
     color: ${theme.colors.primaryBg};
     margin-bottom: 70px;
+
+    @media screen and (max-width: 1140px) {  
+        max-width: 520px;
+    }
 `
 
 const ButtonBillboard = styled.button`
@@ -81,9 +96,5 @@ const ButtonBillboard = styled.button`
         color: ${theme.colors.secondaryBg};
         background-color: ${theme.colors.primaryBg};
         border: 2px solid ${theme.colors.secondaryBg};
-    }
-    
-    @media screen () {
-        
     }
 `

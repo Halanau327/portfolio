@@ -48,9 +48,9 @@ export const Slider: React.FC<SliderPropsType> = ({slides}) => {
 };
 
 const SwiperDescription = styled.div`
-    color: ${theme.colors.primaryBg};
     width: 100%;
     text-align: center;
+    color: ${theme.colors.primaryBg};
 `
 
 const SwiperImage = styled.img`
@@ -59,6 +59,7 @@ const SwiperImage = styled.img`
     border-radius: 50%;
     object-fit: cover;
     margin: 30px 0;
+    filter: grayscale(100%);
 `
 
 const SwiperName = styled.span`

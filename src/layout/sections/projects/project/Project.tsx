@@ -49,6 +49,7 @@ const StyledProject = styled.div`
 const Image = styled.img`
     width: 330px;
     height: 260px;
+
 `
 
 const Title = styled.h3`

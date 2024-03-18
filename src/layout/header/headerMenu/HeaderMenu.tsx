@@ -1,16 +1,22 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Image from "../../../assets/images/icon.png";
 import {theme} from "../../../styles/Theme";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Menu} from "./menu/Menu";
 
+const items = ["Skills", "Projects", "Testimony", "Contacts"]
 
 export const HeaderMenu = () => {
     return (
         <StyledHeaderMenu>
-                <Link href="/">
-                    <HeaderLogo src={Image} alt="Logo"/>
-                </Link>
-                <HeaderSpan/>
+            <Link href="/">
+                <HeaderLogo src={Image} alt="Logo"/>
+            </Link>
+            <Menu menuItems={items}/>
+            <BurgerButton isOpen={true}>
+                <span></span>
+            </BurgerButton>
         </StyledHeaderMenu>
     );
 };
@@ -23,77 +29,66 @@ const StyledHeaderMenu = styled.div`
     padding: 0 5vw;
 `
 
-const Link = styled.a`
-
-`
-
-const HeaderSpan = styled.span`
-    display: inline-block;
-    position: relative;
-    width: 27px;
-    height: 3px;
-    background-color: ${theme.colors.secondaryBg};
-    
-    &::before,
-    ::after {
-        content: "";
-        position: absolute;
-        width: 27px;
-        height: 3px;
-        background-color: ${theme.colors.secondaryBg};
-    }
-
-    &::before {
-        bottom: -8px;
-    }
-
-    &::after {
-        top: 16px;
-    }
-`
-
 const HeaderLogo = styled.img`
     width: 100px;
     height: 70px;
 `
 
+const Link = styled.a`
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+`
+const BurgerButton = styled.button<{isOpen: boolean}>`
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    z-index: 9999999;
+    
+    span {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: ${theme.colors.secondaryBg};
+        position: absolute;
+        left:40px;
+        bottom: 50px;
+        
+        ${props => props.isOpen && css<{isOpen: boolean}>`
+            background-color: rgba(255, 255, 255, 0);
+        `}
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 2px;
+            background-color: ${theme.colors.secondaryBg};
+            position: absolute;
+            transform: translateY(-10px);
 
-// export const HeaderMenu = (props: { menuItems: Array<string> }) => {
-//     return (
-//         <StyledHeaderMenu>
-//             <ul>
-//                 {props.menuItems.map((item, index) => {
-//                     return <ListItem key={index}>
-//                         <Link href="">{item}</Link>
-//                     </ListItem>
-//                 })}
-//             </ul>
-//         </StyledHeaderMenu>
-//     );
-// };
-//
-// const StyledHeaderMenu = styled.nav`
-//     ul {
-//         display: flex;
-//         gap: 32px;
-//         justify-content: center;
-//         text-transform: uppercase;
-//         font-size: 18px;
-//         font-weight: 400;
-//         line-height: 126.02%;
-//     }
-// `
-// const ListItem = styled.li`
-//     display: none;
-//
-//     &:hover {
-//         transform: scale(120%);
-//         transition: transform 1.5s;
-//     }
-// `
-//
-// const Link = styled.a`
-//     font-size: 16px;
-//     font-weight: 400;
-//     line-height: 150%;
-// `
+            ${props => props.isOpen && css<{isOpen: boolean}>`
+                transform: rotate(-45deg) translateY(0);
+        `}
+        }
+        
+        &::after{
+            content: "";
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: ${theme.colors.secondaryBg};
+            position: absolute;
+            transform: translateY(10px);
+
+            ${props => props.isOpen && css<{isOpen: boolean}>`
+                transform: rotate(45deg) translateY(0);
+                width: 36px;
+        `}
+        }
+        
+    }
+`
+

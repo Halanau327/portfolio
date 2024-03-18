@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Menu} from "../../../components/menu/Menu";
+import {Menu} from "../../header/headerMenu/menu/Menu";
 import {Container} from "../../../components/Container";
 import contactsIcon from "./../../../assets/images/icon.png"
 import {theme} from "../../../styles/Theme";
@@ -119,6 +119,13 @@ const Email = styled.a`
 const Logo = styled.img`
     width: 100px;
     height: 70px;
+
+    @media screen and (max-width: 1140px) {
+        display: block;
+        justify-content: center;
+        align-items: center;
+
+    }
 `
 
 const ContactsWrapper = styled.div`

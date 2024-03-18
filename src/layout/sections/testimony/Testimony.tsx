@@ -88,6 +88,7 @@ const sliderData = [
 //
 
 const Text = styled.span`
+    font-family: "Inconsolata", monospace;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;

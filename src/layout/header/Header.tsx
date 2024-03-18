@@ -5,7 +5,7 @@ import {Billboard} from "../../components/billboard/Billboard";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
-// const items = ["Skills", "Projects", "Testimony", "Contacts"]
+
 
 export const Header = () => {
     return (
@@ -21,6 +21,12 @@ const StyledHeader = styled.header`
     background-size: cover;
     width: 100%;
     height: 100vh;
+    
+    @media screen and (max-width: 1140px) {
+        height: auto;
+        background-position: 65%;
+    }
+
 `
 
 // const HeaderContainer = styled.div`

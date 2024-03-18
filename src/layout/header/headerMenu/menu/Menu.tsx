@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "../../styles/Theme";
+import styled, {css} from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 
 export const Menu = (props: { menuItems: Array<string> }) => {
     return (
-        <StyledMenu>
+        <StyledMenu isOpen={true}>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
@@ -17,15 +17,32 @@ export const Menu = (props: { menuItems: Array<string> }) => {
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.nav<{isOpen: boolean}>`
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: bisque;
+    opacity: 0.5;
+    display: none;
+    
+    ${props => props.isOpen && css<{isOpen: boolean}>`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `}
+    
     ul {
         display: flex;
-        gap: 32px;
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 18px;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 19px;
         font-weight: 400;
         line-height: 126.02%;
+        justify-content: center;
+        text-transform: uppercase;
     }
 `
 
@@ -36,6 +53,8 @@ const Link = styled.a`
 `
 
 const ListItem = styled.li`
+    
+    
     &:hover {
         transform: scale(120%);
         transition: transform 1s;
