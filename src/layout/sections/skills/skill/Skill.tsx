@@ -44,4 +44,8 @@ const SkillText = styled.p`
     box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.5);
     height: 260px;
     padding:20px;
+    
+    @media screen and (max-width: 400px) {
+        height: 310px;
+    }
 `

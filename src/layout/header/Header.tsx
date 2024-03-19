@@ -4,9 +4,6 @@ import photo from "../../assets/images/ava.png"
 import {Billboard} from "../../components/billboard/Billboard";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
-
-
-
 export const Header = () => {
     return (
         <StyledHeader>
@@ -26,15 +23,7 @@ const StyledHeader = styled.header`
         height: auto;
         background-position: 65%;
     }
-
 `
-
-// const HeaderContainer = styled.div`
-// display: flex;
-// justify-content: space-between;
-//     width: 100%;
-//     padding: 0 15px;
-// `
 
 
 

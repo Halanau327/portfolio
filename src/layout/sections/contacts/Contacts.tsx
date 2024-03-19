@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Menu} from "../../header/headerMenu/menu/Menu";
 import {Container} from "../../../components/Container";
 import contactsIcon from "./../../../assets/images/icon.png"
 import {theme} from "../../../styles/Theme";
+import {MenuContacts} from "./menuContacts/MenuContacts";
 
 const itemsContacts = ["Skills", "Projects", "Testimony", "Contacts"]
 
@@ -23,7 +23,7 @@ export const Contacts = () => {
                         <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
                     </FlexWrapper>
                     <FlexWrapper align="center">
-                        <Menu menuItems={itemsContacts}/>
+                        <MenuContacts menuItems={itemsContacts}/>
                     </FlexWrapper>
                     <FlexWrapper direction="column" justify="center">
                         <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply
