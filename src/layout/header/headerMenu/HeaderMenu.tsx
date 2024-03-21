@@ -1,27 +1,26 @@
 import React from 'react';
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import Image from "../../../assets/images/icon.png";
 import {Menu} from "./menu/Menu";
-
-const items = ["Skills", "Projects", "Testimony", "Contacts"]
+import {animateScroll as scroll} from "react-scroll";
 
 export const HeaderMenu = () => {
     return (
         <StyledHeaderMenu>
-            <Link href="/">
+            <Link onClick={() => {scroll.scrollToTop()}}>
                 <HeaderLogo src={Image} alt="Logo"/>
             </Link>
-            <Menu menuItems={items}/>
+            <Menu/>
         </StyledHeaderMenu>
     );
 };
 
-const StyledHeaderMenu = styled.div`
+const  StyledHeaderMenu = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 0 3vw;
+    height: 60px;
+    position: fixed;
 `
 
 const HeaderLogo = styled.img`
@@ -36,7 +35,5 @@ const HeaderLogo = styled.img`
 `
 
 const Link = styled.a`
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
+    cursor: pointer;
 `

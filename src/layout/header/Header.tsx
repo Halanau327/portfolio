@@ -6,7 +6,7 @@ import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 export const Header = () => {
     return (
-        <StyledHeader>
+        <StyledHeader id={"Home"}>
             <HeaderMenu/>
             <Billboard/>
         </StyledHeader>

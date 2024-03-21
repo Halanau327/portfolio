@@ -10,7 +10,7 @@ import {Slider} from "./slider/Slider";
 
 export const Testimony = () => {
     return (
-        <StyledTestimony>
+        <StyledTestimony id={"Testimony"}>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper justify="center">

@@ -11,7 +11,7 @@ const itemsContacts = ["Skills", "Projects", "Testimony", "Contacts"]
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
+        <StyledContacts id={"Contacts"}>
             <Container>
                 <Logo src={contactsIcon}/>
                 <ContactsWrapper>
@@ -22,10 +22,10 @@ export const Contacts = () => {
                         <InputContacts placeholder="write your email address"/>
                         <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
                     </FlexWrapper>
-                    <FlexWrapper align="center">
+                    <FlexWrapper align="start">
                         <MenuContacts menuItems={itemsContacts}/>
                     </FlexWrapper>
-                    <FlexWrapper direction="column" justify="center">
+                    <FlexWrapper direction="column" align="start">
                         <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply
                             have a
                             conversation.</TextContactsRight>
@@ -89,6 +89,7 @@ const SubscribeButton = styled.button`
     color: ${theme.colors.primaryBg};
     border: none;
     cursor: pointer;
+    transition: 0.7s;
 
     &:hover {
         color: ${theme.colors.secondaryBg};
@@ -112,7 +113,7 @@ const Email = styled.a`
 
     &:hover {
         transform: scale(110%);
-        transition: transform 1s;
+        transition: transform 0.7s;
     }
 `
 

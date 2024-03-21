@@ -20,12 +20,13 @@ export const MenuContacts = (props: { menuItems: Array<string> }) => {
 const StyledMenu = styled.nav`
     ul {
         display: flex;
+        justify-content: flex-start;
         flex-direction: column;
+        text-align: center;
         gap: 30px;
         font-size: 19px;
         font-weight: 400;
         line-height: 126.02%;
-        justify-content: center;
         text-transform: uppercase;
     }
 `
@@ -39,7 +40,7 @@ const Link = styled.a`
 const ListItem = styled.li`
     &:hover {
         transform: scale(120%);
-        transition: transform 1s;
+        transition: transform 0.7s;
     }
 `
 

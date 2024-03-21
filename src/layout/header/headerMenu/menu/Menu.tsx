@@ -1,8 +1,32 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme";
+import {Link} from "react-scroll";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+const items = [
+    {
+        title: "Home",
+        href: "Home"
+    },
+    {
+        title: "Skills",
+        href: "Skills"
+    },
+    {
+        title: "Projects",
+        href: "Projects"
+    },
+    {
+        title: "Testimony",
+        href: "Testimony"
+    },
+    {
+        title: "Contacts",
+        href: "Contacts"
+    }
+]
+
+export const Menu = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
@@ -16,9 +40,14 @@ export const Menu = (props: { menuItems: Array<string> }) => {
                 setMenuIsOpen(false)
             }}>
                 <ul>
-                    {props.menuItems.map((item, index) => {
+                    {items.map((item, index) => {
                         return <ListItem key={index}>
-                            <Link href={`#${item}`}>{item}</Link>
+                            <MenuLink
+                                to={item.href}
+                                smooth={true} onClick={() => {
+                                setMenuIsOpen(false)
+                            }}>
+                                {item.title}</MenuLink>
                         </ListItem>
                     })}
                 </ul>
@@ -27,19 +56,18 @@ export const Menu = (props: { menuItems: Array<string> }) => {
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.div`
 
 `
 
-const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
+const BurgerMenuPopup = styled.nav<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;    
-    background-color: darkgray;
-    opacity: 0.95;
+    z-index: 999999;
+    background-color: white;
     display: none;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -47,10 +75,10 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
         justify-content: center;
         align-items: center;
     `}
-    
     ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 30px;
         font-size: 19px;
         font-weight: 400;
@@ -60,7 +88,10 @@ const BurgerMenuPopup = styled.div<{ isOpen: boolean }>`
     }
 `
 
-const Link = styled.a`
+const MenuLink = styled(Link)`
+    text-align: center;
+    cursor: pointer;
+
     &:visited {
         color: ${theme.colors.secondaryBg};
     }
@@ -69,7 +100,7 @@ const Link = styled.a`
 const ListItem = styled.li`
     &:hover {
         transform: scale(120%);
-        transition: transform 1s;
+        transition: transform 0.7s;
     }
 `
 
@@ -81,7 +112,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     height: 200px;
     z-index: 9999999;
     cursor: pointer;
-    
+
     span {
         display: block;
         width: 36px;
@@ -94,7 +125,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 255, 255, 0);
         `}
-        
         &::before {
             content: "";
             display: block;
@@ -121,11 +151,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);
                 width: 36px;
-            `}
+            `
+            }
         }
     }
-
-    
 `
 
 
