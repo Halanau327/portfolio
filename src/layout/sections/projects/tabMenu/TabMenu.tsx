@@ -32,7 +32,6 @@ const StyledProjectsMenu = styled.nav`
         justify-content: center;
         margin: 30px 0 30px;
     }
-
 `
 
 const ListItem = styled.li`

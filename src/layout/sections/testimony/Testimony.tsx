@@ -12,7 +12,7 @@ export const Testimony = () => {
     return (
         <StyledTestimony id={"Testimony"}>
             <Container>
-                <SectionTitle>Testimony</SectionTitle>
+                <SectionTitle color={theme.colors.primaryBg}>Testimony</SectionTitle>
                 <FlexWrapper justify="center">
                     <Text>what clients say</Text>
                 </FlexWrapper>
@@ -69,23 +69,6 @@ const sliderData = [
         job: "CEO"
     },
 ]
-
-
-//
-// export const Testimony = () => {
-//     return (
-//         <StyledTestimony>
-//             <Container>
-//                 <SectionTitle>Testimony</SectionTitle>
-//                 <FlexWrapper justify="center">
-//                     <Text>what clients say</Text>
-//                 </FlexWrapper>
-//                 <Slider/>
-//             </Container>
-//         </StyledTestimony>
-//     );
-// };
-//
 
 const Text = styled.span`
     font-family: "Inconsolata", monospace;

@@ -8,5 +8,5 @@ export const SectionTitle = styled.h2`
     font-weight: 300;
     line-height: 150.02%;
     text-transform: uppercase;
-    color: ${theme.colors.accent}
+    color: ${(props) => props.color};
 `

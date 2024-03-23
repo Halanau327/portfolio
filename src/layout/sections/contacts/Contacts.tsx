@@ -6,7 +6,6 @@ import contactsIcon from "./../../../assets/images/icon.png"
 import {theme} from "../../../styles/Theme";
 import {MenuContacts} from "./menuContacts/MenuContacts";
 
-const itemsContacts = ["Skills", "Projects", "Testimony", "Contacts"]
 
 
 export const Contacts = () => {
@@ -23,7 +22,7 @@ export const Contacts = () => {
                         <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
                     </FlexWrapper>
                     <FlexWrapper align="start">
-                        <MenuContacts menuItems={itemsContacts}/>
+                        <MenuContacts/>
                     </FlexWrapper>
                     <FlexWrapper direction="column" align="start">
                         <TextContactsRight>Just feel free to contact if you wanna collaborate with me, or simply

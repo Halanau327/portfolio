@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme";
 import {Link} from "react-scroll";
 
-const items = [
+export const items = [
     {
         title: "Home",
         href: "Home"
@@ -44,8 +44,8 @@ export const Menu = () => {
                         return <ListItem key={index}>
                             <MenuLink
                                 to={item.href}
-                                smooth={true} onClick={() => {
-                                setMenuIsOpen(false)
+                                smooth={true}
+                                onClick={() => {setMenuIsOpen(false)
                             }}>
                                 {item.title}</MenuLink>
                         </ListItem>
@@ -75,6 +75,7 @@ const BurgerMenuPopup = styled.nav<{ isOpen: boolean }>`
         justify-content: center;
         align-items: center;
     `}
+    
     ul {
         display: flex;
         flex-direction: column;
@@ -133,6 +134,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${theme.colors.secondaryBg};
             position: absolute;
             transform: translateY(-10px);
+            transition: .7s;
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(0);
@@ -147,6 +149,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${theme.colors.secondaryBg};
             position: absolute;
             transform: translateY(10px);
+            transition: .7s;
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);

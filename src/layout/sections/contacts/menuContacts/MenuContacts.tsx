@@ -1,15 +1,18 @@
 import React from 'react';
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
+import {items} from "../../../header/headerMenu/menu/Menu";
+import {Link} from "react-scroll";
 
-
-export const MenuContacts = (props: { menuItems: Array<string> }) => {
+export const MenuContacts = () => {
     return (
         <StyledMenu>
             <ul>
-                {props.menuItems.map((item, index) => {
+                {items.map((item, index) => {
                     return <ListItem key={index}>
-                        <Link href={`#${item}`}>{item}</Link>
+                        <MenuLink to={item.href}
+                                  smooth={true}>
+                            {item.title}</MenuLink>
                     </ListItem>
                 })}
             </ul>
@@ -31,10 +34,11 @@ const StyledMenu = styled.nav`
     }
 `
 
-const Link = styled.a`
+const MenuLink = styled(Link)`
     &:visited {
         color: ${theme.colors.secondaryBg};
     }
+    cursor: pointer;
 `
 
 const ListItem = styled.li`

@@ -1,4 +1,14 @@
+.mySwiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: white;
+    }
 
+    .swiper-pagination-bullet {
+        background: white;
+    }
 
-
-
+    .swiper-wrapper {
+      padding: 70px 0;
+    }
+}

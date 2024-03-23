@@ -28,7 +28,7 @@ export const Slider: React.FC<SliderPropsType> = ({slides}) => {
             slidesPerView={1}
             navigation
             pagination={{clickable: true}}
-            scrollbar={{draggable: true}}
+            className={"mySwiper"}
             onSwiper={(swiper: any) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}>
             {slides.map((slide) => (
@@ -48,6 +48,10 @@ export const Slider: React.FC<SliderPropsType> = ({slides}) => {
 };
 
 const SwiperDescription = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     text-align: center;
     color: ${theme.colors.primaryBg};
