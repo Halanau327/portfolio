@@ -44,6 +44,7 @@ const Link = styled.a<{ active: boolean }>`
     line-height: 126.02%;
     text-transform: uppercase;
     cursor: pointer;
+   
 
     &:visited {
         color: ${theme.colors.secondaryBg};

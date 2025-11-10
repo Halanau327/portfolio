@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import {theme} from "../styles/Theme";
 
 export const SectionTitle = styled.h2`
-    font-family: Jost;
+    font-family: Jost,sans-serif;
     text-align: center;
     font-size: calc((100vw - 375px)/(1920 - 375) * (120 - 70) + 70px);
     font-weight: 300;

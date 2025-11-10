@@ -4,9 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
-import SliderImg from '../../../assets/images/testimony.jpg'
 import testimonyBackground from './../../../assets/images/back1.jpg'
-import {Slider} from "./slider/Slider";
 
 export const Testimony = () => {
     return (
@@ -14,9 +12,17 @@ export const Testimony = () => {
             <Container>
                 <SectionTitle color={theme.colors.primaryBg}>Testimony</SectionTitle>
                 <FlexWrapper justify="center">
-                    <Text>what clients say</Text>
+                    <Text>my achievements & stats</Text>
                 </FlexWrapper>
-                <Slider slides={sliderData}/>
+                <StatsWrapper>
+                    {statsData.map((stat, index) => (
+                        <StatCard key={index}>
+                            <StatNumber>{stat.number}</StatNumber>
+                            <StatLabel>{stat.label}</StatLabel>
+                            <StatDescription>{stat.description}</StatDescription>
+                        </StatCard>
+                    ))}
+                </StatsWrapper>
             </Container>
         </StyledTestimony>
     );
@@ -31,42 +37,26 @@ const StyledTestimony = styled.section`
     width: 100%;
 `
 
-const sliderData = [
+const statsData = [
     {
-        description: "Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis nec dolor posuere tempus. Nulla congue et dolor sit amet, elit consectetur adipiscing",
-        icon: SliderImg,
-        name: "Lucas wolfer",
-        job: "ceo - raisins"
+        number: "5+",
+        label: "Projects",
+        description: "Completed projects"
     },
     {
-        description: "Lorem ipsum dolor sit amet, elit consectetur adipiscing.",
-        icon: SliderImg,
-        name: "Lucas wolfer",
-        job: "Lucas wolfer"
+        number: "2+",
+        label: "Years",
+        description: "Of experience"
     },
     {
-        description: "Lorem ipsum dolor sit amet",
-        icon: SliderImg,
-        name: "Alex Halanau",
-        job: "CEO"
+        number: "100%",
+        label: "Quality",
+        description: "Code standards"
     },
     {
-        description: "Lorem ipsum dolor sit amet",
-        icon: SliderImg,
-        name: "Alex Halanau",
-        job: "CEO"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet",
-        icon: SliderImg,
-        name: "Alex Halanau",
-        job: "CEO"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet",
-        icon: SliderImg,
-        name: "Alex Halanau",
-        job: "CEO"
+        number: "24/7",
+        label: "Available",
+        description: "For new challenges"
     },
 ]
 
@@ -81,4 +71,67 @@ const Text = styled.span`
     padding: 5px;
     color: ${theme.colors.primaryBg};
     background-color:black;
+`
+
+const StatsWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 20px;
+    
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+`
+
+const StatCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        background: rgba(0, 0, 0, 0.5);
+    }
+`
+
+const StatNumber = styled.div`
+    font-size: 48px;
+    font-weight: 700;
+    color: ${theme.colors.primaryBg};
+    margin-bottom: 10px;
+    line-height: 1;
+    
+    @media screen and (max-width: 600px) {
+        font-size: 36px;
+    }
+`
+
+const StatLabel = styled.div`
+    font-size: 20px;
+    font-weight: 600;
+    color: ${theme.colors.primaryBg};
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    
+    @media screen and (max-width: 600px) {
+        font-size: 16px;
+    }
+`
+
+const StatDescription = styled.div`
+    font-size: 14px;
+    color: ${theme.colors.primaryBg};
+    opacity: 0.8;
+    
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+    }
 `

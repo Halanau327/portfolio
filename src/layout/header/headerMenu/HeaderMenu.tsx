@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Image from "../../../assets/images/icon.png";
+import logo from "../../../assets/images/galanovAlex.png"
 import {Menu} from "./menu/Menu";
 import {animateScroll as scroll} from "react-scroll";
 
@@ -8,7 +8,7 @@ export const HeaderMenu = () => {
     return (
         <StyledHeaderMenu>
             <Link onClick={() => {scroll.scrollToTop()}}>
-                <HeaderLogo src={Image} alt="Logo"/>
+                <HeaderLogo src={logo} alt="Logo"/>
             </Link>
             <Menu/>
         </StyledHeaderMenu>
@@ -26,8 +26,8 @@ const  StyledHeaderMenu = styled.div`
 const HeaderLogo = styled.img`
     position: fixed;
     z-index: 9999999;
-    width: 100px;
-    height: 70px;
+    width: 120px;
+    height: 85px;
     
     @media screen and (max-width: 600px){
         position: static;

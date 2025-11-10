@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Icon} from "../../../components/icon/Icon";
 import {theme} from "../../../styles/Theme";
 
@@ -8,47 +7,66 @@ import {theme} from "../../../styles/Theme";
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper gap="50px">
-                <Link href="https://www.facebook.com">
-                    <Icon iconId="facebook" height="25px" width="25px"></Icon>
+            <SocialLinks>
+                <Link href="https://github.com/Halanau327" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="github" height="25px" width="25px" viewBox="0 0 20 20"></Icon>
                 </Link>
-                <Link href="https://www.twitter.com">
-                    <Icon iconId="twitter" height="25px" width="25px"></Icon>
+                <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="linked" height="25px" width="25px" viewBox="0 0 13.5 13.5"></Icon>
                 </Link>
-                <Link href="https://www.linkenid.com">
-                    <Icon iconId="linken" height="25px" width="25px"></Icon>
+                <Link href="https://t.me/halanau" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="telegram" height="25px" width="25px" viewBox="0 0 18 18"></Icon>
                 </Link>
-                <Link href="https://www.instagram.com/halanau">
-                    <Icon iconId="instagram" height="25px" width="25px"></Icon>
-                </Link>
-            </FlexWrapper>
-            <TextFooter>2024 Resume. All right reserved.</TextFooter>
+            </SocialLinks>
+            <TextFooter>© 2025 Galanov Alexander</TextFooter>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
     background-color: ${theme.colors.secondaryBg};
-    height: 150px;
+    min-height: 150px;
+    padding: 40px 20px;
     margin: 0 auto;
-
 `
+const SocialLinks = styled.div`
+    display: flex;
+    gap: 30px;
+    align-items: center;
+`
+
 const TextFooter = styled.small`
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
     color: ${theme.colors.primaryBg};
+    text-align: center;
 `
+
 const Link = styled.a`
     cursor: pointer;
-    max-height: 25px;
-    max-width: 25px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    color: ${theme.colors.primaryBg};
+    
     &:hover {
         transform: scale(120%);
-        transition: transform 1s;
+    }
+    
+    svg {
+        width: 25px;
+        height: 25px;
+        fill: ${theme.colors.primaryBg};
+        color: ${theme.colors.primaryBg};
     }
 `

@@ -2,24 +2,19 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
-import contactsIcon from "./../../../assets/images/icon.png"
+import contactsIcon from "./../../../assets/images/galanovAlex.png"
 import {theme} from "../../../styles/Theme";
 import {MenuContacts} from "./menuContacts/MenuContacts";
-
-
 
 export const Contacts = () => {
     return (
         <StyledContacts id={"Contacts"}>
             <Container>
-                <Logo src={contactsIcon}/>
+
                 <ContactsWrapper>
                     <FlexWrapper direction="column">
-                        <TextContactsLeft>Subscribe to newsletter to get some updates related with branding, designs
-                            and
-                            more.</TextContactsLeft>
-                        <InputContacts placeholder="write your email address"/>
-                        <SubscribeButton type={"submit"}>subscribe it</SubscribeButton>
+                      <Logo src={contactsIcon}/>
+                        <TextContactsLeft>Looking for a developer? Let's discuss your project and bring your ideas to life with modern web technologies.</TextContactsLeft>
                     </FlexWrapper>
                     <FlexWrapper align="start">
                         <MenuContacts/>
@@ -56,45 +51,6 @@ const TextContactsRight = styled.p`
     font-weight: 400;
     line-height: 225.02%;
     max-width: 340px;
-`
-
-const InputContacts = styled.input`
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 23px;
-    text-transform: capitalize;
-    height: 50px;
-    width: 300px;
-    padding-left: 25px;
-    margin-bottom: 15px;
-    color: ${theme.colors.secondaryBg};
-    background-color: ${theme.colors.font};
-    border: none;
-
-    &::placeholder {
-        color: ${theme.colors.secondaryBg};
-    }
-`
-
-const SubscribeButton = styled.button`
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 23px;
-    text-align: center;
-    text-transform: uppercase;
-    height: 50px;
-    width: 300px;
-    background-color: ${theme.colors.secondaryBg};
-    color: ${theme.colors.primaryBg};
-    border: none;
-    cursor: pointer;
-    transition: 0.7s;
-
-    &:hover {
-        color: ${theme.colors.secondaryBg};
-        background-color: ${theme.colors.primaryBg};
-        border: 2px solid ${theme.colors.secondaryBg};
-    }
 `
 
 const Email = styled.a`

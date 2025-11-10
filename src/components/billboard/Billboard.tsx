@@ -3,18 +3,19 @@ import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 import {theme} from "../../styles/Theme";
 import Typewriter from 'typewriter-effect';
+import {Link} from 'react-scroll';
 
 export const Billboard = () => {
     return (
         <StyledBillboard>
             <FlexWrapper direction="column" margin="140px 0 0 0">
-                <GreedingsOfBillboard>Hi! Everyone</GreedingsOfBillboard>
-                <SubtitleOfBillboard>Halanau Alex</SubtitleOfBillboard>
+                <GreetingsOfBillboard>Hi! Everyone</GreetingsOfBillboard>
+                <SubtitleOfBillboard>Alex Galanov </SubtitleOfBillboard>
                 <TitleOfBillboard>
                     <p>Frontend Dev</p>
                     <Typewriter
                         options={{
-                            strings: ["A Web Dev", "A Frontend Dev", "A Web Designer"],
+                            strings: ["A Web Dev", "A Frontend Dev"],
                             autoStart: true,
                             loop: true,
                             delay: 150
@@ -23,7 +24,9 @@ export const Billboard = () => {
                 </TitleOfBillboard>
                 <DescriptionOfBillboard>Collaborating with designers and backend developers for exceptional digital
                     solutions.</DescriptionOfBillboard>
-                <ButtonBillboard>get in touch</ButtonBillboard>
+                <Link to="Contacts" smooth={true} duration={500}>
+                    <ButtonBillboard>get in touch</ButtonBillboard>
+                </Link>
             </FlexWrapper>
         </StyledBillboard>
     );
@@ -43,7 +46,7 @@ const StyledBillboard = styled.div`
     }
 `
 
-const GreedingsOfBillboard = styled.span`
+const GreetingsOfBillboard = styled.span`
     max-width: 127px;
     width: 100%;
     font-size: 19px;
